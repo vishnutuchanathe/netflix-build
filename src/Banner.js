@@ -2,6 +2,8 @@ import axios from './axios';
 import React, {useState, useEffect } from 'react'
 import './Banner.css';
 import requests from './Requests';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 
 function Banner() {
     const [movie, setMovie] = useState([]);
@@ -28,11 +30,11 @@ function Banner() {
             }}>
             <div className="banner__contents">
                 <h1 className="banner__title">{movie?.title || movie?.name || movie?.original_name}</h1>
-                <div className="banner__buttons">
-                    <button className="banner__button">Play</button>
-                    <button className="banner__button">My List</button>
-                </div>
                 <h1 className="banner__description">{truncate(movie?.overview,150)}</h1>
+                <div className="banner__buttons">
+                    <button className="banner__button play"><PlayArrowIcon fontSize="large"/>&nbsp;&nbsp;Play</button>
+                    <button className="banner__button info" ><InfoOutlinedIcon />&nbsp;&nbsp;&nbsp;More Info</button>
+                </div>
             </div>
             <div className="banner--fadeBottom">
             </div>
