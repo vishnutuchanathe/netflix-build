@@ -28,6 +28,8 @@ function Banner() {
             backgroundSize: "cover",
             backgroundPosition: "center center",
             }}>
+            <div className="banner--fadeTop">
+            </div>
             <div className="banner__contents">
                 <h1 className="banner__title">{movie?.title || movie?.name || movie?.original_name}</h1>
                 <h1 className="banner__description">{truncate(movie?.overview,150)}</h1>

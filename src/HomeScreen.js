@@ -20,6 +20,11 @@ function HomeScreen() {
             />
             <Row title="Action Movies"
                 fetchUrl={requests.fetchActionMovies}/>
+            <Row 
+                title="Top 10 in India Today"
+                fetchUrl={requests.fetchNetflixOriginals}
+                isNumberRow="true"
+            />
             <Row title="Comedy Movies"
                 fetchUrl={requests.fetchComedyMovies}/>
             <Row title="Horror Movies"

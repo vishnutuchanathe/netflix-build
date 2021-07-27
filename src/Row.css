@@ -7,6 +7,7 @@
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 13px 20px 0px 0;
+  cursor: pointer;
 }
 .row__posters::-webkit-scrollbar {
   display: none;
@@ -15,6 +16,7 @@
   object-fit: contain;
   width: 100%;
   max-width: 230px;
+  min-width: 230px;
   margin-right: 10px;
   transition: transform 450ms;
   border-radius: 4px;
@@ -25,6 +27,7 @@
 }
 .row__posterLarge {
   max-width: 250px;
+  margin-right: 30px !important;
 }
 .row__posterLarge:hover {
   transform: scale(1.09);
@@ -32,4 +35,20 @@
 }
 .row__title {
   font-size: 18px;
+}
+.row__number {
+  max-height: 166px;
+  width: 200px;
+}
+.row__posterNumber {
+  max-width: 90px !important;
+  max-height: 166px !important;
+  transform: translate(-114px) !important;
+  border-radius: 4px !important;
+}
+.row__numbers {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 200px;
+  margin-right: 20px;
 }
