@@ -9,7 +9,7 @@ const base_url = "https://image.tmdb.org/t/p/original"
 function Row({ title, fetchUrl, isLargeRow, isNumberRow }) {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
-  const number =["one (2).png", "two (1).png", "three.png", "four.png", "five.png", "six.png", "seven.png", "eight.png", "nine.png", "zero.png"];
+  const number =["one.png", "two.png", "three.png", "four.png", "five.png", "six.png", "seven.png", "eight.png", "nine.png", "zero.png"];
 
   useEffect(() => {
 
