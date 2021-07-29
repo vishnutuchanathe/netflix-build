@@ -2,9 +2,11 @@ import React, {useState, useEffect} from 'react';
 import './Nav.css';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import SearchIcon from '@material-ui/icons/Search';
+import { useHistory } from 'react-router-dom';
 
 function Nav() {
     const [show, handleShow] = useState(false);
+    const history = useHistory();
 
     const transitionNavBar = () => {
         if(window.scrollY > 100) {
@@ -20,9 +22,9 @@ function Nav() {
     return (
         <div className={`nav ${show && 'nav__black'}`}>
         <div className="nav__contents">
-        <img className="nav__logo" src="logo.png" alt="" />
+        <img className="nav__logo" onClick={() => history.push("/")} src="logo.png" alt="" />
         <div className="nav__links">
-        <p className="nav__link">Home</p>
+        <p onClick={() => history.push("/")} className="nav__link">Home</p>
         <p className="nav__link">TV shows</p>
         <p className="nav__link">Movies</p>
         <p className="nav__link">New & Popular</p>
@@ -33,7 +35,7 @@ function Nav() {
         <p className="nav__content__right">CHILDREN</p>
         <div className="nav__content__right"><NotificationsIcon /></div>
         </div>
-        <div className="nav__content__right"><img className="nav__avatar" src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png" alt="" /></div>
+        <div className="nav__content__right"><img onClick={() => history.push("/profile")} className="nav__avatar" src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png" alt="" /></div>
         </div>
         </div>
     )
